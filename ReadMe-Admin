@@ -1,0 +1,52 @@
+Admin module : 
+
+By yashwanth : 
+
+control layer :
+
+url: http://localhost:9091/AdminController/insertAdmin
+
+{
+    "adminId": 103,
+    "username": "Raju",
+    "password": "4568",
+    "mobileNumber": "555555",
+    "email": "raju@gmail.com",
+    "address":"Hyderabad"
+}
+
+
+
+
+
+
+
+
+By Shiva Teja : 
+
+Control Layer(controller) :
+
+getAllTrips(int customerId) :
+url : "http://localhost:9091/AdminController/allTrips"
+
+getTripsCabwise() :
+url : "http://localhost:9091/AdminController/allTripsCab"
+
+getTripsCustomerwise() : 
+url : "http://localhost:9091/AdminController/allTripsCustomer"
+
+getTripsDatewise() :
+url : "http://localhost:9091/AdminController/allTripsDate"
+
+getAllTripsForDays(int customerId,LocalDateTime fromDate,LocalDateTime toDate) :
+url : "http://localhost:9091/AdminController/allTripsDays"
+
+Exception : 
+
+created : CustomerNotFoundException class
+
+Repository :
+ created : AdminRepository interface
+ 
+Service Layer : 
+created : business logics(method implementation) for all methods in control layer

@@ -1,0 +1,105 @@
+
+\\	CUSTOMER MODULE
+
+Insert customer :
+POST :       Body  , raw   ,JSON
+
+http://localhost:9091/customer/insertCustomer
+	{
+        "customerId": 101,
+        "username": "Ramesh",
+        "password": "4566",
+        "mobileNumber": "9999999",
+        "email": "ramesh@gmail.com"
+    }
+
+
+http://localhost:9091/customer/insertCustomer
+{
+        "customerId": 102,
+        "username": "Ram",
+        "password": "1234",
+        "mobileNumber": "9999999",
+        "email": "Ram@gmail.com"
+    }
+
+
+View Customer
+GET METHOD
+----------
+http://localhost:9091/customer/getAllCustomer
+---------------------------------------------------------------------------
+OUTPUT
+-----
+
+ 
+    {
+        "customerId": 101,
+        "username": "siddharth",
+        "password": "1234",
+        "mobileNumber": "9623466397",
+        "email": "Siddhushitole.1999@gmail.com"
+    },
+    {
+        "customerId": 102,
+        "username": "Ram",
+        "password": "4566",
+        "mobileNumber": "9999999",
+        "email": "Ram@gmail.com"
+    }
+
+   
+ View customer by ID
+ ---------------------------------------------------------------------------
+ http://localhost:9091/customer/getCustomer/101
+---------------------------------------------------------------------------
+OUTPUT
+-----
+
+ 
+    {
+        "customerId": "101",
+        "username": "siddharth",
+        "password": "1234",
+        "mobileNumber": "9623466397",
+        "email": "Siddhushitole.1999@gmail.com"
+    },
+ 
+ 
+ 
+ 
+ Delete Customer
+ -------------
+ http://localhost:9091/customer/deleteCustomer/101
+ ----------------------------------------------------------------------------
+ OUTPUT
+ -------
+ 
+ 
+ {
+        "customerId": "101",
+        "username": "siddharth",
+        "password": "1234",
+        "mobileNumber": "9999466397",
+        "email": "Sid.1999@gmail.com"
+    }
+    
+    
+ Validate Customer
+ -------------
+ POST METHOD
+ -------------
+ http://localhost:9091/customer/login/siddharth/1234
+ ----------------------------------------------------------------------------
+ OUTPUT
+ -------
+ Valid Customer---------Login success!
+ 
+ 	{
+        "customerId": "101",
+        "username": "siddharth",
+        "password": "1234",
+        "mobileNumber": "9999466397",
+        "email": "Sid.1999@gmail.com"
+    }
+    

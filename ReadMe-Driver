@@ -1,0 +1,92 @@
+url:
+http://localhost:9090/driver
+
+
+--------------------------------------------
+POST - MAPPING FOR INSERT DRIVER
+http://localhost:9091/driver/insert
+--------------------------------------------
+
+[
+    {
+        "driverId": "1234",
+        "licenceNo": "1234SAI4567",
+        "rating": 4.0,
+        "username": "SaiKiran",
+        "password": "nani",
+        "address": "Hyderabad",
+        "mobilenumber": 9133752939,
+        "email": "sai@gmail.com"
+    },
+    {
+        "driverId": "1234",
+        "licenceNo": "1423jashv53",
+        "rating": 4.5,
+        "username": "Shiva",
+        "password": "shiva",
+        "address": "Hyderabad",
+        "mobilenumber": 999999999,
+        "email": "shiva@gmail.com"
+    },
+    {
+        "driverId": "1223",
+        "licenceNo": "26135JHASD",
+        "rating": 5,
+        "username": "SRISAI",
+        "password": "sri",
+        "address": "Karimnagar",
+        "mobilenumber": 777777777,
+        "email": "srisri@gmail.com"
+    },
+    {
+        "driverId": "1234",
+        "licenceNo": "636HS367B",
+        "rating": 4.0,
+        "username": "Yashwanth",
+        "password": "cr",
+        "address": "Delhi",
+        "mobilenumber": 634572781,
+        "email": "yashcr@gmail.com"
+    }
+]
+
+--------------------------------------------------------------
+PUT - UPDATE DRIVER TABLE
+http://localhost:9091/driver/updateDriver
+--------------------------------------------------------------
+{
+        "driverId": 2,
+        "licenceNo": "1423JASHV53",
+        "rating": 5,
+        "username": "Kumar",
+        "password": "kumar",
+        "address": "Hyderabad",
+        "mobilenumber": 999999999,
+        "email": "kumara@gmail.com"
+    }
+
+OUTPUT : The 2nd row in table will be replaced with these details.
+
+
+
+----------------------------------------------------------------
+DELETE - DELETES THE DRIVER ROW
+http://localhost:9091/driver/3
+----------------------------------------------------------------
+OUTPUT : deletes the 3rd row from table.
+
+
+
+-------------------------------------------------------------------
+GET - VIEW BEST DRIVERS 
+http://localhost:9091/driver/bestdrivers
+------------------------------------------------------------------
+OUTPUT  : Displays the list of best drivers from the table with rating more than 4.5
+
+
+
+------------------------------------------------------------------
+GET - VIEW DRIVER
+http://localhost:9091/driver/2
+--------------------------------------------------------------------
+OUTPUT : Displays the details with driver id 2.

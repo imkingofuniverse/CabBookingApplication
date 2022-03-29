@@ -1,0 +1,86 @@
+
+
+insert :
+http://localhost:9091/tripbooking/insert
+
+{
+    "tripBookingId":1,
+    "fromLocation":"nagole",
+    "toLocation":"ammerpet",
+    "fromLocalDateTime":"2020-12-31T15:53:16",
+    "toLocalDateTime":"2021-01-24T15:53:16",
+    "status":false,
+    "distanceInKm":6.0,
+    "bill":34553.0,
+    "customer":{
+    "customerId": 101,
+    "username": "Ramesh",
+    "password": "4566",
+    "mobileNumber": "9999999",
+    "email": "ramesh@gmail.com"
+    },
+     "driver":{
+ "driverId":1,
+ "licenceNo":"uk123",
+ "rating":7,
+ "username":"kumar",
+ "password":"kumar",
+ "address":"Hyderabad",
+ "mobileNumber":999999999,
+ "email":"kumar@gmail.com",
+ "cab":{
+ "cabId":121,
+ "carType":"sports",
+ "perKmRate":170
+}
+}
+}
+
+
+update :
+
+{
+    "tripBookingId":2,
+    "fromLocation":"nacharam",
+    "toLocation":"amberpet",
+    "fromLocalDateTime":"2020-12-31T15:53:16",
+    "toLocalDateTime":"2021-01-24T15:53:16",
+    "status":true,
+    "distanceInKm":8.0,
+    "bill":3453.0,
+    "customer":{
+    "customerId": 103,
+    "username": "Raju",
+    "password": "4568",
+    "mobileNumber": "9999997",
+    "email": "raju@gmail.com"
+    },
+     "driver":{
+ "driverId":2,
+ "licenceNo":"in1234",
+ "rating":3,
+ "username":"Kiran",
+ "password":"nan",
+ "address":"Hyderabad3",
+ "mobileNumber":9333752939,
+ "email":"sai2@gmail.com",
+ "cab":{
+ "cabId":125,
+ "carType":"sports",
+ "perKmRate":153
+}
+}
+}
+
+
+viewAllTripsCustomer():
+
+http://localhost:9091/tripbooking/all/101
+
+calculateBill():
+
+http://localhost:9091/tripbooking/calculate/101
+
+viewAllTripsById():
+
+http://localhost:9091/tripbooking/ById/1

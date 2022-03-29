@@ -1,0 +1,73 @@
+
+
+**insert cab**
+
+http://localhost:9091/cab/insertCab
+
+select post in postman then choose : Body ,raw , JSON
+
+
+{
+        "cabId": "123",
+        "carType": "SUV",
+        "perKmRate": "100"
+    }
+    
+
+**update cab**
+
+http://localhost:9091/cab/updateCab
+
+select put in postman then choose : Body ,raw , JSON
+
+{
+        "cabId": "123",
+        "carType": "SUV",
+        "perKmRate": "100"
+    }
+
+    
+**delete cab**
+
+http://localhost:9091/cab/deleteCab
+
+select delete in postman then choose : Body ,raw , JSON
+
+{
+        "cabId": "123",
+        "carType": "SUV",
+        "perKmRate": "100"
+    }
+    
+
+**viewCabsOfType**
+  
+http://localhost:9091/cab/viewCabsOfType/seden
+
+select get in postman then send url
+
+OUTPUT:
+
+[
+    {
+        "cabId": 1,
+        "carType": "seden",
+        "perKmRate": 100.0
+    },
+    {
+        "cabId": 2,
+        "carType": "seden",
+        "perKmRate": 100.0
+    }
+]
+
+
+**countCabsOfType**
+
+http://localhost:9091/cab/countCabsOfType/seden
+
+select get in postman then send url
+
+OUTPUT
+
+2
